@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 5px;
+}
+
+.img-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.extra-info {
+  padding-left: 20px;
+}
+
+.info-container {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+
+  strong {
+    padding: 2px;
+  }
+
+  #title {
+    text-decoration: underline;
+  }
+}

@@ -14,16 +14,16 @@ export interface BeerPayload {
   ph: number;
   attenuation_level: number;
   volume: {
-    value: number,
-    unit: string
+    value: number;
+    unit: string;
   };
   boil_volume: {
-    value: number,
-    unit: string
+    value: number;
+    unit: string;
   };
   ingredients: {
-    malt: { name: string, amount: { value: number, unit: string } }[],
-    hops: { name: string, amount: { value: number, unit: string } }[],
+    malt: { name: string; amount: { value: number; unit: string } }[];
+    hops: { name: string; amount: { value: number; unit: string } }[];
     yeast: string;
   };
   food_pairing: string[];
@@ -47,16 +47,16 @@ export interface BeerModel {
   ph: number;
   attenuationLevel: number;
   volume: {
-    value: number,
-    unit: string
+    value: number;
+    unit: string;
   };
   boilVolume: {
-    value: number,
-    unit: string
+    value: number;
+    unit: string;
   };
   ingredients: {
-    malt: { name: string, amount: { value: number, unit: string } }[],
-    hops: { name: string, amount: { value: number, unit: string } }[],
+    malt: { name: string; amount: { value: number; unit: string } }[];
+    hops: { name: string; amount: { value: number; unit: string } }[];
     yeast: string;
   };
   foodPairing: string[];

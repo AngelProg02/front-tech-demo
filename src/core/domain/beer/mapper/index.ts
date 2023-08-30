@@ -1,4 +1,4 @@
-import { BeerModel, BeerPayload } from '../models/index';
+import { BeerModel, BeerPayload } from "../models/index";
 
 export const beerPayloadToModel = (payload: BeerPayload): BeerModel => {
   const {
@@ -48,6 +48,6 @@ export const beerPayloadToModel = (payload: BeerPayload): BeerModel => {
   };
 };
 
-export const beerListPayloadToBeerListModel = (payload: BeerPayload[]): BeerModel[] => (
-  payload.map((item) => beerPayloadToModel(item))
-);
+export const beerListPayloadToBeerListModel = (
+  payload: BeerPayload[]
+): BeerModel[] => payload.map((item) => beerPayloadToModel(item));
