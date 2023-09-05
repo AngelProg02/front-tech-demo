@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '@fontsource/roboto/300.css';
@@ -6,7 +6,9 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { HomeScreen } from './screens/home/index';
-import { Index } from './screens/detail/index';
+import { Loading } from './screens/detail/resources/components/loading';
+
+const Index = React.lazy(() => import('./screens/detail/index'));
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,11 @@ const router = createBrowserRouter([
   },
   {
     path: 'beer/:beerId',
-    element: <Index />,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Index />
+      </Suspense>
+    ),
   },
 ]);
 
