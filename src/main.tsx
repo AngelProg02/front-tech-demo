@@ -6,7 +6,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { HomeScreen } from './screens/home/index';
-import { BeerDetail } from './screens/detail/index';
+import { Index } from './screens/detail/index';
 
 const router = createBrowserRouter([
   {
@@ -15,12 +15,12 @@ const router = createBrowserRouter([
   },
   {
     path: 'beer/:beerId',
-    element: <BeerDetail />,
+    element: <Index />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

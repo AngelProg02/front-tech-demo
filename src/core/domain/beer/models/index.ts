@@ -32,6 +32,9 @@ export interface BeerPayload {
 }
 
 export interface BeerModel {
+  map(
+    arg0: (malt: any, index: any) => import('react/jsx-runtime').JSX.Element
+  ): import('react').ReactNode;
   id: number;
   name: string;
   tagline: string;
