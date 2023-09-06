@@ -7,10 +7,10 @@ export const BeerDetail = ({
   hopsInfo,
   yeastInfo,
 }: {
-  beerInfo: BeerModel;
-  maltInfo: BeerModel;
-  hopsInfo: BeerModel;
-  yeastInfo: BeerModel;
+  beerInfo?: BeerModel;
+  maltInfo?: BeerModel;
+  hopsInfo?: BeerModel;
+  yeastInfo?: BeerModel;
 }) => {
   return (
     <Suspense fallback={<Loading />}>
@@ -24,7 +24,7 @@ export const BeerDetail = ({
             <h2 className="title"> Ingredients: </h2>
 
             <ul>
-              {maltInfo.map((malt, index) => (
+              {maltInfo?.map((malt, index) => (
                 <ol className="info-container" key={index}>
                   <li>
                     <b> Malt Name: </b> {malt?.name}
@@ -36,7 +36,7 @@ export const BeerDetail = ({
                 </ol>
               ))}
 
-              {hopsInfo.map((hops, index) => (
+              {hopsInfo?.map((hops, index) => (
                 <ol className="info-container" key={index}>
                   <li>
                     <b> Hops Name: </b> {hops?.name}
@@ -55,7 +55,11 @@ export const BeerDetail = ({
               ))}
 
               <li className="info-container">
-                <b>Yeast Name:</b> {yeastInfo}
+                {yeastInfo && (
+                  <>
+                    <b>Yeast Name:</b> {yeastInfo.name}
+                  </>
+                )}
               </li>
             </ul>
           </div>
