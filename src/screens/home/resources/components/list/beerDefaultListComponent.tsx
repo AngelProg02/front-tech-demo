@@ -1,6 +1,6 @@
 import { ImageListItem, ImageListItemBar, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { BeerModel } from '../../../../core/domain/beer/models';
+import { BeerModel } from '../../../../../core/domain/beer/models';
 import InfoIcon from '@mui/icons-material/Info';
 
 export const BeerDafaultlist: React.FC<{

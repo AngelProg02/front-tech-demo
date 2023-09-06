@@ -6,9 +6,11 @@ const host = 'https://api.punkapi.com';
 const getUrl = (host: string, beerName: string): string =>
   `${host}/v2/beers?beer_name=${beerName}`;
 
+type ResultType = BeerModel[] | { error: string };
+
 export const GetBeersByName = async (
   beerNameToSearch: string
-): Promise<BeerModel[]> => {
+): Promise<ResultType> => {
   try {
     const url = getUrl(host, beerNameToSearch);
     const options: AxiosRequestConfig = {
@@ -24,7 +26,6 @@ export const GetBeersByName = async (
     );
     return beerListPayloadToBeerListModel(filteredBeers);
   } catch (e) {
-    console.error('No se encontró la cerveza que busca');
-    return [];
+    return { error: 'No se encontró la cerveza que busca' };
   }
 };

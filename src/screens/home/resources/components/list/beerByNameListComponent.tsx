@@ -35,7 +35,7 @@ export const BeerByNameListComponent: React.FC<{
           </ImageListItem>
         ))
       ) : (
-        <p id="errorMesage">
+        <p className="errorMesage">
           No se ha encontrado ninguna cerveza con los datos introducidos.
         </p>
       )}

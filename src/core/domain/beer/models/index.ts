@@ -58,6 +58,7 @@ export interface BeerModel {
     unit: string;
   };
   ingredients: {
+    [x: string]: any;
     malt: { name: string; amount: { value: number; unit: string } }[];
     hops: { name: string; amount: { value: number; unit: string } }[];
     yeast: string;
