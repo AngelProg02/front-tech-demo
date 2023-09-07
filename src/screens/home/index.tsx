@@ -22,7 +22,7 @@ export const HomeScreen = () => {
     <main>
       <Navbar beerWantedProp={beerWanted} handleOnChangeProp={handleOnChange} />
       <Container maxWidth="sm">
-        <ImageList sx={{ width: 500, height: '100%', marginTop: '80px' }}>
+        <ImageList sx={{ width: 500, height: '100%' }}>
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader component="div">
               <h1>Beer List:</h1>
