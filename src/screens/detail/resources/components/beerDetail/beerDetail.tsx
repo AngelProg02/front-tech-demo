@@ -54,7 +54,7 @@ export const BeerDetail = ({
             <li className="info-container">
               {yeastInfo && (
                 <>
-                  <b>Yeast Name:</b> {yeastInfo.name}
+                  <b>Yeast Name:</b> {yeastInfo}
                 </>
               )}
             </li>
