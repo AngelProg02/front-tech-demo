@@ -21,13 +21,12 @@ export const HomeScreen = () => {
   return (
     <main>
       <Navbar beerWantedProp={beerWanted} handleOnChangeProp={handleOnChange} />
-      <Container maxWidth="sm">
-        <ImageList sx={{ width: 500, height: '100%' }}>
-          <ImageListItem key="Subheader" cols={2}>
-            <ListSubheader component="div">
-              <h1>Beer List:</h1>
-            </ListSubheader>
-          </ImageListItem>
+      <Container maxWidth="xs">
+        <ImageList sx={{ width: 800, height: '100%', paddingTop: '50px' }}>
+          <ListSubheader component="div">
+            <h1>Beer List:</h1>
+          </ListSubheader>
+          <ImageListItem key="Subheader"></ImageListItem>
           {beerWanted ? (
             <BeerByNameListComponent beerByNameList={beerByNameList} />
           ) : (
